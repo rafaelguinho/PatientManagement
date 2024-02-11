@@ -31,11 +31,11 @@ public partial class UpsertPatient : System.Web.UI.Page
 
     protected void FormUpsertPatient_Submit(object sender, EventArgs e)
     {
-        string firstName = txtFirstName.Text;
-        string lastName = txtLastName.Text;
-        string phone = txtPhone.Text;
-        string email = txtEmail.Text;
-        string notes = txtNotes.Text;
+        string firstName = txtFirstName.Text.Trim();
+        string lastName = txtLastName.Text.Trim();
+        string phone = txtPhone.Text.Trim();
+        string email = txtEmail.Text.Trim();
+        string notes = txtNotes.Text.Trim();
         string gender = ddlGender.SelectedValue;
 
         Patient newPatient = new Patient

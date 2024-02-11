@@ -6,24 +6,24 @@
         <label for="txtFirstName">First Name:</label>
 
         <asp:TextBox class="form-control" ID="txtFirstName" runat="server" />
-        <asp:RequiredFieldValidator ID="RequiredtxtFirstName" runat="server" ControlToValidate="txtFirstName" ErrorMessage="First Name is required"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredtxtFirstName" runat="server" ControlToValidate="txtFirstName" ErrorMessage="First Name is required" class="invalid-feedback"></asp:RequiredFieldValidator>
 
     </div>
     <div class="form-group">
         <label for="txtLastName">Last Name:</label>
 
         <asp:TextBox class="form-control" ID="txtLastName" runat="server" />
-        <asp:RequiredFieldValidator ID="RequiredtxtLastName" runat="server" ControlToValidate="txtLastName" ErrorMessage="Last Name is required"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredtxtLastName" runat="server" ControlToValidate="txtLastName" ErrorMessage="Last Name is required" class="invalid-feedback"></asp:RequiredFieldValidator>
     </div>
 
 
     <div class="form-group">
-        <label for="txtLastName">Phone:</label>
+        <label for="txtLastName">Phone: <small class="form-text text-muted">Ex. (123) 456-7890, 123-456-7890, 123.456.7890, 123 456 7890</small></label>
 
         <asp:TextBox class="form-control" ID="txtPhone" runat="server" />
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPhone" ErrorMessage="Phone is required"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPhone" ErrorMessage="Phone is required" class="invalid-feedback"></asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator ID="revPhoneNumber" runat="server" ControlToValidate="txtPhone"
-            ErrorMessage="Invalid phone number" ValidationExpression="^\(?(\d{3})\)?[\s\-]?(\d{3})[\s\-]?(\d{4})$">
+            ErrorMessage="Invalid phone number" ValidationExpression="^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$" class="invalid-feedback">
         </asp:RegularExpressionValidator>
     </div>
 
@@ -31,8 +31,8 @@
         <label for="txtLastName">Email:</label>
 
         <asp:TextBox class="form-control" ID="txtEmail" runat="server" />
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email is required"></asp:RequiredFieldValidator>
-        <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Invalid email address" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email is required" class="invalid-feedback"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Invalid email address" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" class="invalid-feedback"></asp:RegularExpressionValidator>
     </div>
 
     <div class="form-group">
@@ -43,7 +43,7 @@
             <asp:ListItem Text="Female" Value="Female"></asp:ListItem>
             <asp:ListItem Text="Other" Value="Other"></asp:ListItem>
         </asp:DropDownList>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlGender" ErrorMessage="Gender is required"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator class="invalid-feedback" ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlGender" ErrorMessage="Gender is required"></asp:RequiredFieldValidator>
     </div>
 
 

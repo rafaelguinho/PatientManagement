@@ -4,6 +4,9 @@
 
     <div class="container">
         <h2>List of Patients</h2>
+
+        <a class="nav-link" runat="server" href="~/UpsertPatient">Create new patient</a>
+
         <asp:GridView ID="GridViewPatients"
             runat="server"
             CssClass="table table-striped"

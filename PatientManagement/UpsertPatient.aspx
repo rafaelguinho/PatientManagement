@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="UpsertPatient.aspx.cs" Inherits="UpsertPatient" %>
 
 <asp:Content ID="ListPatientsContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Create new patient</h2>
+    <h2>Create/Updated new patient</h2>
     <div class="form-group">
         <label for="txtFirstName">First Name:</label>
 
@@ -53,5 +53,5 @@
     </div>
     <!-- Add other fields such as Phone, Email, Gender, Notes here -->
 
-    <asp:Button ID="AddButton" Text="Add" OnClick="FormUpsertPatient_Submit" runat="server" />
+    <asp:Button ID="AddButton" class="btn btn-primary" Text="Save" OnClick="FormUpsertPatient_Submit" runat="server" />
 </asp:Content>
